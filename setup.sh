@@ -27,5 +27,12 @@ do
     fi
 done
 
-
+printDivider
+printHeading "Starting Installations"
+source ./scripts/homebrew.sh
+source ./scripts/git.sh
+source ./scripts/oh-my-zsh.sh
+source ./scripts/unix.sh
+source ./scripts/common-apps.sh
 source ./scripts/editors.sh "${devtoolchoices[@]}"
+source ./scripts/tools.sh
