@@ -36,3 +36,25 @@ source ./scripts/unix.sh
 source ./scripts/common-apps.sh
 source ./scripts/editors.sh "${devtoolchoices[@]}"
 source ./scripts/tools.sh
+
+read -r -p "Do you want to install Terraform? [y/N]" response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    source ./scripts/opt-in/terraform.sh
+fi
+
+read -r -p "Do you want to install AWS CLI? [y/N]" response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    source ./scripts/opt-in/aws-cli.sh
+fi
+
+read -r -p "Do you want to install Python tools? [y/N]" response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    source ./scripts/opt-in/python-tools.sh
+fi
+
+printDivider
+printHeading "Finished Installation"
+printDivider
+echo "Please restart your terminal to apply all changes"
+printDivider
+# End of file

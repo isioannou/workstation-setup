@@ -26,3 +26,5 @@ if [[ -d "/Applications/Firefox.app" ]]; then
 else
     printStep "Firefox" "brew install --cask firefox"
 fi
+
+set -e
