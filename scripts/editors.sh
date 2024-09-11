@@ -5,6 +5,9 @@ source ./scripts/util.sh
 
 printHeading "Installing editors"
 
+#Installing vim by default
+printStep "vim" "brew install vim"
+
 editors=("$@")
 
 for editor in "${!editors[@]}"
@@ -35,7 +38,4 @@ do
     esac
 done
 
-
-#Installing vim by default
-#printStep "vim" "brew install vim"
-
+set -e

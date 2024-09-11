@@ -49,7 +49,7 @@ fi
 
 read -r -p "Do you want to install Python tools? [y/N]" response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    source ./scripts/opt-in/python-tools.sh
+    source ./scripts/opt-in/python.sh
 fi
 
 printDivider

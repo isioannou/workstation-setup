@@ -21,11 +21,9 @@ echo "Ensuring you have the latest Homebrew"
 brew update 
 
 echo "Upgrading any already-installed formulae"
-brew upgrade --all
+brew upgrade
 
 printStep "Homebrew services" "brew tap homebrew/services"
-
-printStep "Cask fonts" "brew tap homebrew/cask-fonts"
 
 echo "Cleaning up your Homebrew installation..."
 brew cleanup

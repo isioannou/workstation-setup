@@ -6,10 +6,12 @@ source ./scripts/util.sh
 printHeading "Installing Terraform"
 printDivider
 
-brew tap hashicorp/tap
-printStep "terraform" "brew install hashicorp/tap/terraform"
+printStep "terraform tfenv" "brew install tfenv"
+printStep "terraform 1.5.0" "tfenv install 1.5.0"
+
+printf "Verify terraform installation"
+terraform --version
 
 printStep "terraform shell completion" "terraform -install-autocomplete"
-printStep "terraform tfenv" "brew install tfenv"
 
 set -e
