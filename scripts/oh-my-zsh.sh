@@ -24,7 +24,7 @@ sed -i '' -e "s/plugins=/plugins=(git zsh-autosuggestions zsh-syntax-highlightin
 
 cat << EOT >> ~/.zshrc
 docker() {
-  if [[ `uname -m` == "arm64" ]] && [[ "$1" == "run" || "$1" == "build" ]]; then
+  if [[ "\$(uname -m)" == "arm64" ]] && [[ "\$1" == "run" || "\$1" == "build" ]]; then
     /usr/local/bin/docker "\$1" --platform linux/amd64 "\${@:2}"
   else
      /usr/local/bin/docker "\$@"
