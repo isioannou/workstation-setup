@@ -52,6 +52,11 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     source ./scripts/opt-in/python.sh
 fi
 
+read -r -p "Do you want to install Golang? [y/N]" response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    source ./scripts/opt-in/golang.sh
+fi
+
 printDivider
 printHeading "Finished Installation"
 printDivider
